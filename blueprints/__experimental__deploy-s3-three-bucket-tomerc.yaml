@@ -16,9 +16,9 @@ outputs:
   bucket_5:
     value: '{{ .grains.tomerc_bucket_5.outputs.s3_bucket_arn }}'
 inputs:
-  execution_host:
-    type: string
-    default: qualidev2
+  agent:
+    type: execution-host
+    default: playground
     description: the name of the execution host to be used
   bucket_name:
     type: string
@@ -37,8 +37,8 @@ grains:
       source:
         store: autogen_repo_asset_0af60acf
         path: terraform/s3-tomerc
-      host:
-        name: '{{.inputs.execution_host}}'
+      agent:
+        name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
         - region: us-west-1
@@ -59,7 +59,7 @@ grains:
         store: autogen_repo_asset_0af60acf
         path: terraform/s3-tomerc
       host:
-        name: '{{.inputs.execution_host}}'
+        name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
         - region: us-west-1
@@ -79,8 +79,8 @@ grains:
       source:
         store: autogen_repo_asset_0af60acf
         path: terraform/s3-tomerc
-      host:
-        name: '{{.inputs.execution_host}}'
+      agent:
+        name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
         - region: us-west-1
