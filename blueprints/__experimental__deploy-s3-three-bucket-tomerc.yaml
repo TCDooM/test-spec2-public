@@ -23,7 +23,7 @@ inputs:
   bucket_name:
     type: string
     default: 'tomer-c'
-    description: the name of the bucket to be created
+    description: the name of the bucket to be created, please
   tf-service-account:
     type: string
     display-style: normal
