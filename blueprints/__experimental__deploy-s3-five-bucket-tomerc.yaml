@@ -32,7 +32,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: autogen_repo_asset_0af60acf
+        store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       host:
         name: '{{.inputs.agent}}'
@@ -51,7 +51,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: autogen_repo_asset_0af60acf
+        store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       host:
         name: '{{.inputs.agent}}'
@@ -69,7 +69,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: autogen_repo_asset_0af60acf
+        store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       host:
         name: '{{.inputs.agent}}'
@@ -87,7 +87,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: autogen_repo_asset_0af60acf
+        store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       host:
         name: '{{.inputs.agent}}'
@@ -105,7 +105,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: autogen_repo_asset_0af60acf
+        store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       host:
         name: '{{.inputs.agent}}'
