@@ -90,6 +90,10 @@ grains:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
       agent:
+        name: '{{.inputs.agent}}'
+        service-account: '{{.inputs.tf-service-account}}'
+      host:
+        name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
         - region: us-west-1
