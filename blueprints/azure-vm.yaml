@@ -1,0 +1,51 @@
+spec_version: 2-preview
+
+description: deploy azure vm
+
+inputs:
+  execution_host:
+    type: agent
+    default: playground
+    description: the name of the execution host to be used
+  vm_name:
+    type: string
+    default: "tomer-c-VM"
+    display-style: normal
+  subscription_id:
+    type: string
+    display-style: normal
+    default: "24aae708-4612-497c-a91e-7ec5c657f9db"
+  tenant_id:
+    type: string
+    display-style: normal
+    default: "c55d955e-1ea6-4462-987a-ad33142ddffe"
+  client_id:
+    type: string
+    display-style: masked
+    default: "3ebce624-309c-4fc6-ad0d-f87d4d155f6d"
+  client_secret:
+    type: string
+    display-style: masked
+    default: "OOL8Q~IXJNq7TepsomDd~JpfG59QR_~z80u4uab5"
+
+
+outputs:
+  vm1_name:
+    value: '{{.grains.vm1.outputs.vm_id}}'
+
+grains:
+  vm1:
+    kind: terraform
+    spec:
+      source:
+        path: github.com/QualiNext/test-spec2-public.git//terraform/azure-vm
+      agent:
+        name: '{{.inputs.execution_host}}'
+      inputs:
+        - vm_name: '{{.inputs.vm_name}}'
+        - tenant_id: '{{.inputs.tenant_id}}'
+        - subscription_id: '{{.inputs.subscription_id}}'
+        - client_id: '{{.inputs.client_id}}'
+        - client_secret: '{{.inputs.client_secret}}'
+      outputs:
+        - vm_id
