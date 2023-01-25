@@ -1,4 +1,4 @@
 variable "region" {
-  description = "Region of RDS"
-  default = "us-east-1"
+  description = "ec2 instance region"
+  default = "eu-west-1"
 }
