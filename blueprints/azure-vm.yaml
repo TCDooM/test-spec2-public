@@ -11,22 +11,22 @@ inputs:
     type: string
     default: "tomer-c-VM"
     display-style: normal
-  subscription_id:
-    type: string
-    display-style: normal
-    default: "24aae708-4612-497c-a91e-7ec5c657f9db"
-  tenant_id:
-    type: string
-    display-style: normal
-    default: "ba0ce2f2-cd77-441d-88b1-71ebfa2e7067"
-  client_id:
-    type: string
-    display-style: masked
-    default: "3ebce624-309c-4fc6-ad0d-f87d4d155f6d"
-  client_secret:
-    type: string
-    display-style: masked
-    default: "OOL8Q~IXJNq7TepsomDd~JpfG59QR_~z80u4uab5"
+#  subscription_id:
+#    type: string
+#    display-style: normal
+#    default: "24aae708-4612-497c-a91e-7ec5c657f9db"
+#  tenant_id:
+#    type: string
+#    display-style: normal
+#    default: "ba0ce2f2-cd77-441d-88b1-71ebfa2e7067"
+#  client_id:
+#    type: string
+#    display-style: masked
+#    default: "688d01b9-651a-4ab9-b08e-a947ba3304a6"
+#  client_secret:
+#    type: string
+#    display-style: masked
+#    default: "wc0XG.df665nk18ZDJ_y0T0IbRj41i58Zy"
 
 
 outputs:
@@ -42,11 +42,11 @@ grains:
         path: terraform/azure-vm
       agent:
         name: '{{.inputs.execution_host}}'
-      inputs:
-        - vm_name: '{{.inputs.vm_name}}'
-        - tenant_id: '{{.inputs.tenant_id}}'
-        - subscription_id: '{{.inputs.subscription_id}}'
-        - client_id: '{{.inputs.client_id}}'
-        - client_secret: '{{.inputs.client_secret}}'
+#      inputs:
+#        - vm_name: '{{.inputs.vm_name}}'
+#        - tenant_id: '{{.inputs.tenant_id}}'
+#        - subscription_id: '{{.inputs.subscription_id}}'
+#        - client_id: '{{.inputs.client_id}}'
+#        - client_secret: '{{.inputs.client_secret}}'
       outputs:
         - vm_id
