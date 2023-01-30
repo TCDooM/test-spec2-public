@@ -38,7 +38,8 @@ grains:
     kind: terraform
     spec:
       source:
-        path: github.com/QualiNext/test-spec2-public.git//terraform/azure-vm
+        store: TCDooMtest-spec2-public
+        path: terraform/azure-vm
       agent:
         name: '{{.inputs.execution_host}}'
       inputs:
