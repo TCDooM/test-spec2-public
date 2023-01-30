@@ -18,7 +18,7 @@ inputs:
   tenant_id:
     type: string
     display-style: normal
-    default: "c55d955e-1ea6-4462-987a-ad33142ddffe"
+    default: "ba0ce2f2-cd77-441d-88b1-71ebfa2e7067"
   client_id:
     type: string
     display-style: masked
