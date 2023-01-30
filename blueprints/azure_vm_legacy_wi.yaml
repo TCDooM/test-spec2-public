@@ -20,7 +20,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: bps
+        store: TCDooMtest-spec2-public
         path: terraform/azure_vm_legacy_wi
       host:
         name: '{{ .inputs.agent }}'
