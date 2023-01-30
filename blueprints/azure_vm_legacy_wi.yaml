@@ -4,6 +4,7 @@ description: deploy azure vm
 inputs:
   agent:
     type: execution-host
+    default: tomer-c
   vm_name:
     type: string
     default: "tomer-c"
