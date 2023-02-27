@@ -42,6 +42,6 @@ grains:
         name: '{{ .inputs.agent }}'
       inputs:
         - vm_name: '{{.inputs.vm_name}}-2'
-        - resource_group: '{{.inputs.resource_group}}'
+        - resource_group: '{{.inputs.resource_group}}-2'
       outputs:
         - vm2_id
