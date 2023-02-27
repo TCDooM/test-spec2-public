@@ -16,7 +16,7 @@ outputs:
   vm1_name:
     value: '{{.grains.vm1.outputs.vm_id}}'
   vm2_name:
-    value: '{{.grains.vm1.outputs.vm2_id}}'
+    value: '{{.grains.vm2.outputs.vm2_id}}'
 
 grains:
   vm1:
