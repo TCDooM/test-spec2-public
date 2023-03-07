@@ -40,6 +40,11 @@ grains:
         path: terraform/azure_vm_legacy_wi
       host:
         name: '{{ .inputs.agent }}'
+        kubernetes:
+          nodeSelector:
+            - app: torque
+          pod-labels:
+            - labelTFKey: labelTFValue
       inputs:
         - vm_name: '{{.inputs.vm_name}}-2'
         - resource_group: '{{.inputs.resource_group}}-2'
