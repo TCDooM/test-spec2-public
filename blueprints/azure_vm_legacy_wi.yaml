@@ -15,8 +15,8 @@ inputs:
 outputs:
   vm1_name:
     value: '{{.grains.vm1.outputs.vm_id}}'
-#  vm2_name:
-#    value: '{{.grains.vm2.outputs.vm2_id}}'
+  vm2_name:
+    value: '{{.grains.vm2.outputs.vm2_id}}'
 
 grains:
   vm1:
@@ -32,16 +32,16 @@ grains:
         - resource_group: '{{.inputs.resource_group}}'
       outputs:
         - vm_id
-#  vm2:
-#    kind: terraform
-#    spec:
-#      source:
-#        store: TCDooMtest-spec2-public
-#        path: terraform/azure_vm_legacy_wi
-#      host:
-#        name: '{{ .inputs.agent }}'
-#      inputs:
-#        - vm_name: '{{.inputs.vm_name}}-2'
-#        - resource_group: '{{.inputs.resource_group}}-2'
-#      outputs:
-#        - vm2_id
+  vm2:
+    kind: terraform
+    spec:
+      source:
+        store: TCDooMtest-spec2-public
+        path: terraform/azure_vm_legacy_wi
+      host:
+        name: '{{ .inputs.agent }}'
+      inputs:
+        - vm_name: '{{.inputs.vm_name}}-2'
+        - resource_group: '{{.inputs.resource_group}}-2'
+      outputs:
+        - vm2_id
