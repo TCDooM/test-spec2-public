@@ -2,10 +2,9 @@ spec_version: 2-preview
 description: description text
 
 inputs:
-  compute-service:
-    type: string
-    display-style: normal
-    default: eks
+  agent:
+    type: agent
+    default: tomer-c
 #   access_key:
 #     type: string
 #     display-style: normal
@@ -30,7 +29,7 @@ grains:
         path: terraform/create-ec2-instance
         store: test-spec2-public
       host:
-        name: '{{.inputs.compute-service}}'
+        name: '{{.inputs.agent}}'
         service-account: torque-sa-0d7db5
 #       inputs:
 #         - access_key: '{{.inputs.access_key}}'
