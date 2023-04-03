@@ -73,7 +73,7 @@ resource "azurerm_virtual_machine" "example" {
   name                = var.vm_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  vm_size             = "Standard_F2"
+  vm_size             = "Standard_DS1_v2"
   availability_set_id = azurerm_availability_set.DemoAset.id
   network_interface_ids = [
     azurerm_network_interface.example.id,
@@ -82,7 +82,7 @@ resource "azurerm_virtual_machine" "example" {
   storage_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "22.04"
+    sku       = "19.04"
     version   = "latest"
   }
   storage_os_disk {
