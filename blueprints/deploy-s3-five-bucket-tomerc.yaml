@@ -34,7 +34,7 @@ grains:
       source:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
@@ -53,7 +53,7 @@ grains:
       source:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
@@ -71,7 +71,7 @@ grains:
       source:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
@@ -92,7 +92,7 @@ grains:
       agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
@@ -110,7 +110,7 @@ grains:
       source:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:

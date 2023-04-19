@@ -28,7 +28,7 @@ grains:
       source:
         path: terraform/create-ec2-instance
         store: TCDooMtest-spec2-public
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: torque-sa-0d7db5
 #       inputs:

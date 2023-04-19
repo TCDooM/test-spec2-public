@@ -17,7 +17,7 @@ outputs:
     value: '{{ .grains.tomerc_bucket_5.outputs.s3_bucket_arn }}'
 inputs:
   agent:
-    type: execution-host
+    type: agent
     default: playground
     description: the name of the execution host to be used
   bucket_name:
@@ -58,7 +58,7 @@ grains:
       source:
         store: TCDooMtest-spec2-public
         path: terraform/s3-tomerc
-      host:
+      agent:
         name: '{{.inputs.agent}}'
         service-account: '{{.inputs.tf-service-account}}'
       inputs:
