@@ -12,7 +12,7 @@ grains:
     spec:
       source:
         path: terraform/debug-module
-        store: test-spec2-public
+        store: TCDooMtest-spec2-public
       agent:
         name: '{{.inputs.execution_host}}'
 #       inputs:
