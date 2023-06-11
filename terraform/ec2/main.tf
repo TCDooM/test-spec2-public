@@ -12,12 +12,12 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0abe92d15a280b758"
+  ami           = "ami-2757f631"
   instance_type = "t2.micro"
 }
 
 resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+  name        = "allow_tls_tomerc"
   description = "Allow TLS inbound traffic"
 
   ingress {
@@ -38,7 +38,7 @@ resource "aws_security_group" "allow_tls" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "allow_tls_tomerc"
   }
 }
 
