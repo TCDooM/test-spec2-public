@@ -2,9 +2,8 @@ spec_version: 2-preview
 description: description text
 
 inputs:
-  agent:
+  compute-service:
     type: agent
-    default: tomer-c
 #   access_key:
 #     type: string
 #     display-style: normal
@@ -27,14 +26,16 @@ grains:
     spec:
       source:
         path: terraform/create-ec2-instance
-        store: TCDooMtest-spec2-public
+        store: test-spec2-public
       agent:
-        name: '{{.inputs.agent}}'
-        service-account: torque-sa-0d7db5
+        name: '{{.inputs.compute-service}}'
+#         service-account: torque-sa-0d7db5
 #       inputs:
 #         - access_key: '{{.inputs.access_key}}'
 #         - secret_key: '{{.inputs.secret_key}}'
 #         - token: '{{.inputs.token}}'
+      env-vars:
+        - TF_LOG: debug
       outputs:
         - public_ip
         - password
