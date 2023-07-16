@@ -9,7 +9,7 @@ inputs:
     description: the name of the execution host to be used
   vm_name:
     type: string
-    default: {{.params.test_secure}}
+    default: '{{.params.test_secure}}'
     display-style: normal
 #  subscription_id:
 #    type: string
