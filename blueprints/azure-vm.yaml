@@ -11,6 +11,10 @@ inputs:
     type: string
     default: "tomer-c-VM"
     display-style: normal
+  sensitive:
+    type: string
+    sensitive: true
+    display-style: normal
 #  subscription_id:
 #    type: string
 #    display-style: normal
@@ -32,8 +36,6 @@ inputs:
 outputs:
   vm1_name:
     value: '{{.grains.vm1.outputs.vm_id}}'
-  secure_output:
-    value: params.test_secure - '{{.params.test_secure}}'
 
 grains:
   vm1:
